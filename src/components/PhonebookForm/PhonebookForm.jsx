@@ -32,7 +32,7 @@ export class PhonebookForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="phonebook_form">
-          <h2>Name:</h2>
+          <h2>Name</h2>
           <input
             type="text"
             name="name"
@@ -43,7 +43,7 @@ export class PhonebookForm extends Component {
             className="form_input"
             placeholder="Name"
           />
-          <h2>Number:</h2>
+          <h2>Number</h2>
           <input
             type="tel"
             name="number"
