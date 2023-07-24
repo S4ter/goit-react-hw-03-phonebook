@@ -12,8 +12,10 @@ export class Phonebook extends Component {
     localStorage.setItem('addedContacts', JSON.stringify(this.state.contacts));
   }
   componentDidMount() {
-    const storedContacts = localStorage.getItem('addedContacts');
-    this.setState({ contacts: JSON.parse(storedContacts) });
+    if ('addedContacts' in localStorage) {
+      const storedContacts = localStorage.getItem('addedContacts');
+      this.setState({ contacts: JSON.parse(storedContacts) });
+    }
   }
   checkDuplicateContact = name => {
     return this.state.contacts.some(contact => contact.name === name);
